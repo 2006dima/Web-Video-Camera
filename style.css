@@ -1,0 +1,66 @@
+body {
+  background: #1f4037; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #99f2c8,
+    #1f4037
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #99f2c8,
+    #1f4037
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+/* id */
+#video {
+  border: 5px solid whitesmoke;
+  border-bottom: 5px solid rgba(60, 255, 0, 0.829);
+  max-width: 640px;
+  width: 640px;
+  width: 95%;
+  object-fit: cover;
+}
+/* class */
+.buttons {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  bottom: 15px;
+}
+.fa-camera,
+.fa-download {
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  transition: all 600ms ease-in-out;
+}
+.fa-camera:hover,
+.fa-download:hover {
+  color: rgb(136, 230, 112);
+  font-size: 36px;
+}
+/* tags */
+canvas {
+  display: none;
+}
+a {
+  -webkit-user-drag: none;
+}
+/* effects */
+.effect {
+  opacity: 0.5;
+  transition: all 100ms linear;
+}
