@@ -2,6 +2,7 @@ const video = document.getElementById("video");
 const canvas = document.getElementById("canvas");
 const snap = document.querySelector(".snap");
 const download = document.querySelector(".download");
+let sound  = document.querySelector(".sound");
 navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
   video.srcObject = stream;
   video.play();
@@ -10,6 +11,8 @@ let image_data_url;
 let count = 0;
 snap.addEventListener("click", () => {
   video.classList.toggle("effect");
+  sound.play()
+  sound.currentTime = 0;
   setTimeout(() => video.classList.toggle("effect"), 300);
   canvas
     .getContext("2d")
